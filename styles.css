@@ -1,0 +1,142 @@
+/* ===== LGTM Cat Button (toolbar icon style) ===== */
+.lgtm-cat-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #656d76;
+  border: none !important;
+  padding: 4px !important;
+  margin-left: 2px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: color 0.15s ease, background 0.15s ease;
+  line-height: 1;
+  vertical-align: middle;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  order: 9999;
+}
+
+.lgtm-cat-btn:hover {
+  background: transparent !important;
+  color: #0969da;
+}
+
+.lgtm-cat-btn:active {
+  color: #0550ae;
+}
+
+.lgtm-cat-btn img {
+  opacity: 0.65;
+  transition: opacity 0.15s ease;
+}
+
+.lgtm-cat-btn:hover img {
+  opacity: 1;
+}
+
+/* ===== Dialog ===== */
+.lgtm-cat-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  background: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.14),
+    0 2px 8px rgba(0, 0, 0, 0.08);
+  width: min(960px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+}
+
+.lgtm-dialog-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eaeef2;
+  gap: 6px;
+}
+
+.lgtm-dialog-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #57606a;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ===== 5枚横並びグリッド ===== */
+.lgtm-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.lgtm-thumb {
+  flex: 1 1 140px;
+  min-width: 120px;
+  height: 160px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  transition: all 0.15s ease;
+  object-fit: cover;
+  background: #f6f8fa;
+  display: block;
+}
+
+.lgtm-thumb:hover {
+  border-color: #0969da;
+  transform: scale(1.05);
+  box-shadow: 0 4px 14px rgba(9, 105, 218, 0.25);
+}
+
+/* ===== Refresh Button ===== */
+.lgtm-refresh-btn {
+  width: 100%;
+  background: #f6f8fa;
+  color: #57606a;
+  border: 1px solid #d0d7de;
+  padding: 6px 0;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.lgtm-refresh-btn:hover {
+  background: #ebeff2;
+  border-color: #0969da;
+  color: #0969da;
+}
+
+/* ===== Loading / Error ===== */
+.lgtm-status {
+  text-align: center;
+  padding: 24px 0;
+  font-size: 12px;
+  color: #57606a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.lgtm-status--error {
+  color: #cf222e;
+}
